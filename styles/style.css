@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: skyblue;
+  font-family: 'Fredoka One', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  gap: 20px;
+}
+
+.meme-container {
+  flex: 1 1 60%;
+  padding: 20px;
+  border: 3px solid yellow;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: green;
+  margin-bottom: 20px;
+}
+
+/* Meme Display Area */
+.displayArea {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  background-color: #e6f7ff;
+  overflow: hidden;
+}
+
+/* Background and Images Styling */
+.backgroundImage,
+#catImage,
+#hatImage,
+#shirtImage {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  top: 0;
+}
+
+/* Adjust sizes for smaller screens */
+@media (max-width: 768px) {
+  .backgroundImage,
+  #catImage,
+  #hatImage,
+  #shirtImage {
+    width: 90%;
+  }
+
+}
+
+/* Text Inputs */
+.controls {
+  margin-top: 20px;
+}
+
+.controls label {
+  display: block;
+  margin: 10px 0 5px;
+  color: green;
+  font-weight: bold;
+}
+
+.controls input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Meme Text Styling */
+.meme-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
+
+.meme-text.top {
+  top: 10px;
+}
+
+.meme-text.bottom {
+  bottom: 10px;
+}
+
+/* Sidebar Item Selection */
+.item-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid yellow;
+}
+
+.item-selection img {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.arrow {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  background-color: red;
+}
+
+/* Download Button */
+.downloadBtn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: green;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Fredoka One', sans-serif;
+  text-align: center;
+}
+
+.downloadBtn:hover {
+  background-color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meme-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .item-selection img {
+    width: 60px;
+  }
+
+  .downloadBtn {
+    font-size: 1em;
+  }
+}
