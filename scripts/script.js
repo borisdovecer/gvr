@@ -1,16 +1,23 @@
 // Array of cat images
 const cats = [
-    "https://michimaker.vercel.app/_next/image?url=%2Fassets%2Fcat%2Fmichiwhat.png%3Findex%3D6&w=96&q=75",
-  "https://michimaker.vercel.app/_next/image?url=%2Fassets%2Fcat%2Fpurp.png%3Findex%3D8&w=96&q=75",
-  "https://michimaker.vercel.app/_next/image?url=%2Fassets%2Fcat%2Fscary2.png%3Findex%3D9&w=96&q=75"
+    "./images/Cat/1.png",
+  "./images/Cat/2.png",
+  "./images/Cat/3.png",
+  "./images/Cat/4.png",
+  "./images/Cat/5.png",
+  "./images/Cat/6.png",
 ];
 let catIndex = 0;
 
 // Array of hat images
 const hats = [
-    "https://michimaker.vercel.app/_next/image?url=%2Fassets%2Fhats%2Fanime2.png%3Findex%3D2&w=96&q=75",
-  "https://raw.githubusercontent.com/shaykhmirzaban/Michi-Meme-Maker/refs/heads/main/images/Cat/10.png",
-  "https://michimaker.vercel.app/_next/image?url=%2Fassets%2Fhats%2Fatchhat.png%3Findex%3D8&w=96&q=75"];
+  "./images/hats/1.png",
+  "./images/hats/2.png",
+  "./images/hats/3.png",
+  "./images/hats/4.png",
+  "./images/hats/5.png",
+  "./images/hats/6.png",
+];
 let hatIndex = 0;
 
 // DOM elements
