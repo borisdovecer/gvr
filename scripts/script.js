@@ -30,6 +30,7 @@ let shirtIndex = 0;
 const backgrounds = [
   "./images/background/1.png",
   "./images/background/2.png",
+  "./images/background/3.png",
 ];
 let backgroundsIndex = 0;
 
