@@ -173,6 +173,7 @@ document.querySelector('.downloadBtn').addEventListener('click', function () {
   html2canvas(displayArea, {
     useCORS: true,
     allowTaint: true,
+    scale: 2,
   }).then(canvas => {
     const link = document.createElement('a');
     link.download = 'meme.png';
