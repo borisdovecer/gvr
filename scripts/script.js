@@ -1,30 +1,28 @@
 // Array of cat images
 const cats = [
-  "./images/Cat/1.png",
-  "./images/Cat/2.png",
-  "./images/Cat/3.png",
-  "./images/Cat/4.png",
-  "./images/Cat/5.png",
-  "./images/Cat/6.png",
+  "./images/cat/green.png",
+  "./images/cat/redd.png",
 ];
 let catIndex = 0;
 
-// Array of hat images
-const hats = [
-  "./images/hats/1.png",
-  "./images/hats/2.png",
-  "./images/hats/3.png",
-  "./images/hats/4.png",
-  "./images/hats/5.png",
-  "./images/hats/6.png",
+// Array of eye images
+const eyes = [
+  "./images/eyes/1.png",
+  "./images/eyes/2.png",
 ];
-let hatIndex = 0;
+let eyeIndex = 0;
+
+// Array of eye images
+const mouths = [
+  "./images/mouths/1.png",
+  "./images/mouths/2.png",
+];
+let mouthIndex = 0;
 
 // Array of shirt images
 const shirts = [
-  "./images/pants/1.png",
-  "./images/pants/2.png",
-  "./images/pants/3.png",
+  "./images/shirts/1.png",
+  "./images/shirts/2.png",
 ];
 let shirtIndex = 0;
 
@@ -32,20 +30,20 @@ let shirtIndex = 0;
 const backgrounds = [
   "./images/background/1.png",
   "./images/background/2.png",
-  "./images/background/3.png",
-  "./images/background/4.png",
 ];
 let backgroundsIndex = 0;
 
 // DOM elements previews
 const catPreview = document.getElementById('catPreview');
-const hatPreview = document.getElementById('hatPreview');
+const eyePreview = document.getElementById('eyePreview');
+const mouthPreview = document.getElementById('mouthPreview');
 const shirtPreview = document.getElementById('shirtPreview');
 const bgPreview = document.getElementById('bgPreview');
 
 // DOM elements images
 const catImage = document.getElementById('catImage');
-const hatImage = document.getElementById('hatImage');
+const eyeImage = document.getElementById('eyeImage');
+const mouthImage = document.getElementById('mouthImage');
 const shirtImage = document.getElementById('shirtImage');
 const bgImage = document.getElementById('bgImage');
 
@@ -59,13 +57,23 @@ function updateCat() {
   };
 }
 
-function updateHat() {
+function updateEye() {
   const img = new Image();
   img.crossOrigin = "Anonymous";  // Enable CORS
-  img.src = hats[hatIndex];
+  img.src = eyes[eyeIndex];
   img.onload = function() {
-    hatPreview.src = img.src;
-    hatImage.src = img.src;  // Update the main meme area
+    eyePreview.src = img.src;
+    eyeImage.src = img.src;  // Update the main meme area
+  };
+}
+
+function updateMouth() {
+  const img = new Image();
+  img.crossOrigin = "Anonymous";  // Enable CORS
+  img.src = mouths[mouthIndex];
+  img.onload = function() {
+    mouthPreview.src = img.src;
+    mouthImage.src = img.src;  // Update the main meme area
   };
 }
 
@@ -99,14 +107,24 @@ document.getElementById('nextCat').addEventListener('click', () => {
   updateCat();
 });
 
-// Event listeners for hat navigation
-document.getElementById('prevHat').addEventListener('click', () => {
-  hatIndex = (hatIndex > 0) ? hatIndex - 1 : hats.length - 1;
-  updateHat();
+// Event listeners for eye navigation
+document.getElementById('prevEye').addEventListener('click', () => {
+  eyeIndex = (eyeIndex > 0) ? eyeIndex - 1 : eyes.length - 1;
+  updateEye();
 });
-document.getElementById('nextHat').addEventListener('click', () => {
-  hatIndex = (hatIndex < hats.length - 1) ? hatIndex + 1 : 0;
-  updateHat();
+document.getElementById('nextEye').addEventListener('click', () => {
+  eyeIndex = (eyeIndex < eyes.length - 1) ? eyeIndex + 1 : 0;
+  updateEye();
+});
+
+// Event listeners for eye navigation
+document.getElementById('prevMouth').addEventListener('click', () => {
+  mouthIndex = (mouthIndex > 0) ? mouthIndex - 1 : mouths.length - 1;
+  updateMouth();
+});
+document.getElementById('nextMouth').addEventListener('click', () => {
+  mouthIndex = (mouthIndex < mouths.length - 1) ? mouthIndex + 1 : 0;
+  updateMouth();
 });
 
 // Event listeners for shirt navigation
@@ -131,7 +149,8 @@ document.getElementById('nextBg').addEventListener('click', () => {
 
 // Initially load the first cat and hat images
 updateCat();
-updateHat();
+updateEye();
+updateMouth();
 updateShirt();
 updateBackground();
 
@@ -150,21 +169,17 @@ document.getElementById('bottomTextVal').addEventListener('input', function () {
 // Handle download button click
 document.querySelector('.downloadBtn').addEventListener('click', function () {
   const displayArea = document.getElementById('displayAreaScreen');
-
-  // Use html2canvas to capture the meme
   html2canvas(displayArea, {
     useCORS: true,
     allowTaint: true,
   }).then(canvas => {
-    // Create a temporary anchor element
     const link = document.createElement('a');
     link.download = 'meme.png';
     link.href = canvas.toDataURL('image/png');
-
-    // Programmatically click the link to trigger the download
     link.click();
   }).catch(error => {
     console.error("Error generating meme:", error);
     alert("There was an error generating your meme. Please try again.");
   });
 });
+

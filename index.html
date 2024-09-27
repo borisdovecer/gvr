@@ -6,20 +6,19 @@
   <title>Green vs Redd - Profile Picture Generator</title>
   <link rel="stylesheet" href="./styles/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <div class="container">
     <div class="meme-container">
-      <h1>Create Your Meme</h1>
-      <button class="downloadBtn">Download Meme</button>
+      <h1>Generate your own Green or Redd Cats!</h1>
 
       <!-- Display area for meme -->
       <div id="displayAreaScreen" class="displayArea">
         <img id="bgImage" class="backgroundImage" src="./images/background/1.png" alt="Your meme background">
-        <img id="catImage" src="./images/Cat/1.png" alt="Cat">
-        <img id="hatImage" src="./images/hats/1.png" alt="Hat">
-        <img id="shirtImage" src="./images/pants/1.png" alt="shirt">
+        <img id="catImage" src="./images/cat/green.png" alt="Cat">
+        <img id="eyeImage" src="./images/eyes/1.png" alt="Eye">
+        <img id="mouthImage" src="./images/mouths/1.png" alt="mouth">
+        <img id="shirtImage" src="./images/shirts/1.png" alt="shirt">
         <div id="topText" class="meme-text top"></div>
         <div id="bottomText" class="meme-text bottom"></div>
       </div>
@@ -32,6 +31,7 @@
         <label for="bottomTextVal">Bottom Text:</label>
         <input type="text" id="bottomTextVal" placeholder="Enter bottom text">
       </div>
+      <button class="downloadBtn">Download Meme</button>
     </div>
 
     <!-- Right Sidebar -->
@@ -39,21 +39,28 @@
       <h3>Select Cat</h3>
       <div class="item-selection">
         <button class="arrow" id="prevCat">&larr;</button>
-        <img id="catPreview" src="./images/Cat/2.png" alt="Cat Preview">
+        <img id="catPreview" src="./images/cat/green.png" alt="Cat Preview">
         <button class="arrow" id="nextCat">&rarr;</button>
       </div>
 
-      <h3>Select Hat</h3>
+      <h3>Select Eye</h3>
       <div class="item-selection">
-        <button class="arrow" id="prevHat">&larr;</button>
-        <img id="hatPreview" src="./images/hats/2.png" alt="Hat Preview">
-        <button class="arrow" id="nextHat">&rarr;</button>
+        <button class="arrow" id="prevEye">&larr;</button>
+        <img id="eyePreview" src="./images/eyes/1.png" alt="eye Preview">
+        <button class="arrow" id="nextEye">&rarr;</button>
+      </div>
+
+      <h3>Select Mouth</h3>
+      <div class="item-selection">
+        <button class="arrow" id="prevMouth">&larr;</button>
+        <img id="mouthPreview" src="./images/mouths/1.png" alt="mouth Preview">
+        <button class="arrow" id="nextMouth">&rarr;</button>
       </div>
 
       <h3>Select Shirt</h3>
       <div class="item-selection">
         <button class="arrow" id="prevShirt">&larr;</button>
-        <img id="shirtPreview" src="./images/pants/2.png" alt="Shirt Preview">
+        <img id="shirtPreview" src="./images/shirts/1.png" alt="Shirt Preview">
         <button class="arrow" id="nextShirt">&rarr;</button>
       </div>
 

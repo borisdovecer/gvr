@@ -53,10 +53,10 @@ h1 {
 /* Meme Display Area */
 .displayArea {
   position: relative;
-  width: 100%;
+  width: 500px;
   padding-top: 75%;
-  border: 2px solid yellow;
-  border-radius: 10px;
+  /*border: 2px solid yellow;*/
+  /*border-radius: 10px;*/
   background-color: #e6f7ff;
   overflow: hidden;
 }
@@ -64,12 +64,13 @@ h1 {
 /* Background and Images Styling */
 .backgroundImage,
 #catImage,
-#hatImage,
+#eyeImage,
+#mouthImage,
 #shirtImage {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 100%;
   max-width: 500px;
   height: auto;
   top: 0;
@@ -79,7 +80,8 @@ h1 {
 @media (max-width: 768px) {
   .backgroundImage,
   #catImage,
-  #hatImage,
+  #eyeImage,
+  #mouthImage,
   #shirtImage {
     width: 90%;
   }
