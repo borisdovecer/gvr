@@ -12,7 +12,7 @@ const eyes = [
 ];
 let eyeIndex = 0;
 
-// Array of eye images
+// Array of mouth images
 const mouths = [
   "./images/mouths/1.png",
   "./images/mouths/2.png",

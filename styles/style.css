@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: skyblue;
+  background-color: #30f8ff;
   font-family: 'Fredoka One', sans-serif;
   color: #333;
   display: flex;
@@ -31,10 +31,9 @@ body {
 
 .meme-container {
   flex: 1 1 60%;
-  padding: 20px;
+  padding: 10px;
   border: 3px solid yellow;
   border-radius: 15px;
-  background-color: #f9f9f9;
 }
 
 .sidebar {
@@ -46,19 +45,50 @@ body {
 
 h1 {
   text-align: center;
-  color: green;
+  color: gold;
   margin-bottom: 20px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+h3 {
+  color: gold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.green {
+  color: green;
+}
+
+.redd {
+  color: red;
 }
 
 /* Meme Display Area */
 .displayArea {
   position: relative;
   width: 500px;
-  padding-top: 75%;
-  /*border: 2px solid yellow;*/
-  /*border-radius: 10px;*/
-  background-color: #e6f7ff;
+  height: 500px;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .displayArea {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 425px) {
+  .displayArea {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+  }
 }
 
 /* Background and Images Styling */
@@ -85,7 +115,6 @@ h1 {
   #shirtImage {
     width: 90%;
   }
-
 }
 
 /* Text Inputs */
@@ -112,6 +141,7 @@ h1 {
 .meme-text {
   position: absolute;
   left: 50%;
+  text-transform: uppercase;
   transform: translateX(-50%);
   width: 90%;
   text-align: center;
@@ -119,6 +149,8 @@ h1 {
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   font-weight: bold;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .meme-text.top {
@@ -127,6 +159,26 @@ h1 {
 
 .meme-text.bottom {
   bottom: 10px;
+}
+
+/* Adjust sizes for smaller screens */
+@media (max-width: 768px) {
+  .meme-text.bottom {
+    bottom: 55px;
+  }
+}
+
+@media (max-width: 425px) {
+  .meme-text.bottom {
+    bottom: 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .meme-text.top {
+    font-size: 1rem;
+  }
 }
 
 /* Sidebar Item Selection */
