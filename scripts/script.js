@@ -140,7 +140,7 @@ document.getElementById('nextShirt').addEventListener('click', () => {
 
 // Event listeners for background navigation
 document.getElementById('prevBg').addEventListener('click', () => {
-  backgroundsIndex = (backgroundsIndex > 0) ? backgrounds.length - 1 : backgrounds.length - 1;
+  backgroundsIndex = (backgroundsIndex > 0) ? backgroundsIndex - 1 : backgrounds.length - 1;
   updateBackground();
 });
 document.getElementById('nextBg').addEventListener('click', () => {
