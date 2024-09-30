@@ -9,6 +9,7 @@ let catIndex = 0;
 const eyes = [
   "./images/eyes/1.png",
   "./images/eyes/2.png",
+  "./images/eyes/3.png",
 ];
 let eyeIndex = 0;
 
@@ -16,6 +17,9 @@ let eyeIndex = 0;
 const mouths = [
   "./images/mouths/1.png",
   "./images/mouths/2.png",
+  "./images/mouths/3.png",
+  "./images/mouths/4.png",
+  "./images/mouths/5.png",
 ];
 let mouthIndex = 0;
 
@@ -23,6 +27,26 @@ let mouthIndex = 0;
 const shirts = [
   "./images/shirts/1.png",
   "./images/shirts/2.png",
+  "./images/shirts/3.png",
+  "./images/shirts/4.png",
+  "./images/shirts/5.png",
+  "./images/shirts/6.png",
+  "./images/shirts/7.png",
+  "./images/shirts/8.png",
+  "./images/shirts/9.png",
+  "./images/shirts/10.png",
+  "./images/shirts/11.png",
+  "./images/shirts/12.png",
+  "./images/shirts/13.png",
+  "./images/shirts/14.png",
+  "./images/shirts/15.png",
+  "./images/shirts/16.png",
+  "./images/shirts/17.png",
+  "./images/shirts/18.png",
+  "./images/shirts/19.png",
+  "./images/shirts/20.png",
+  "./images/shirts/21.png",
+
 ];
 let shirtIndex = 0;
 
@@ -31,6 +55,13 @@ const backgrounds = [
   "./images/background/1.png",
   "./images/background/2.png",
   "./images/background/3.png",
+  "./images/background/4.png",
+  "./images/background/5.png",
+  "./images/background/6.png",
+  "./images/background/7.png",
+  "./images/background/8.png",
+  "./images/background/9.png",
+  "./images/background/10.png",
 ];
 let backgroundsIndex = 0;
 
