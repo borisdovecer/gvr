@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: SuperBubble;
+  src: url("../fonts/SuperBubble-Rpaj3.ttf");
+}
+
 body {
   background-color: #30f8ff;
-  font-family: 'Fredoka One', sans-serif;
+  font-family: 'SuperBubble', sans-serif;
   color: #333;
   display: flex;
   justify-content: center;
@@ -226,7 +231,7 @@ h3 {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: 'Fredoka One', sans-serif;
+  font-family: 'SuperBubble', sans-serif;
   text-align: center;
 }
 
